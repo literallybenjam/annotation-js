@@ -7,8 +7,8 @@ var Annotation = {
 
 Annotation.handleEvent = function(e) {
     if (e.type !== "click") return;
-    if (!this.nextElementSibling.hasAttribute("hidden")) this.nextElementSibling.setAttribute("hidden", "");
-    else this.nextElementSibling.removeAttribute("hidden");
+    if (!e.currentTarget.nextElementSibling.hasAttribute("hidden")) e.currentTarget.nextElementSibling.setAttribute("hidden", "");
+    else e.currentTarget.nextElementSibling.removeAttribute("hidden");
 }
 
 Annotation.parse = function (element) {
